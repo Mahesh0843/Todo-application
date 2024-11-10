@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="signup-body">
+  <header>
+    <nav>
+      <div class="nav-left">
+      <a href="index.html">Home</a>
+      </div>
+      <div class="nav-right">
+      <a href="signup.html" class="active">Sign Up</a>
+      <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password (min 7 chars)" minlength="7" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Task Manager. All rights reserved.</p>
+    <p>Contact: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

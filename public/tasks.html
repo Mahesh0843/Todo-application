@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tasks-body">
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+      </div>
+      <div class="nav-right">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>Your Tasks</h2>
+    <form id="taskForm">
+      <input type="text" id="taskTitle" placeholder="Task Title" required>
+      <textarea id="taskDescription" placeholder="Task Description"></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <button class="toggle-button" onclick="toggleTasks('pending')">Show Pending Tasks</button>
+    <button class="toggle-button" onclick="toggleTasks('completed')">Show Completed Tasks</button>
+
+    <div class="task-container">
+      <section class="pending-tasks" id="pending-tasks">
+        <h2>Pending Tasks</h2>
+        <ul id="pendingTaskList"></ul>
+      </section>
+
+      <section class="completed-tasks" id="completed-tasks">
+        <h2>Completed Tasks</h2>
+        <ul id="completedTaskList"></ul>
+      </section>
+    </div>
+  </div>
+  <!-- <footer>
+    <p>&copy; 2024 Task Manager. All rights reserved.</p>
+    <p>Contact: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+  </footer> -->
+  <script src="tasks.js"></script>
+  <script>
+    function toggleTasks(taskType) {
+      const pendingTasks = document.getElementById('pending-tasks');
+      const completedTasks = document.getElementById('completed-tasks');
+      if (taskType === 'pending') {
+        pendingTasks.classList.toggle('section-active');
+        completedTasks.classList.remove('section-active');
+      } else if (taskType === 'completed') {
+        completedTasks.classList.toggle('section-active');
+        pendingTasks.classList.remove('section-active');
+      }
+    }
+  </script>
+</body>
+</html>

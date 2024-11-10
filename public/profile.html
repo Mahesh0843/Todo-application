@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+      <a href="index.html">Home</a>
+      </div>
+      <div class="nav-right">
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html" class="active">Login</a>
+      </div>
+    
+    </nav>
+  </header>
+  <!-- Separate container for the image at the top -->
+  <div class="image-container">
+    <img src="img3.jpg" alt="Default Image" class="default-image">
+  </div>
+
+  <div class="profile-container">
+    <h2>Profile</h2>
+    <form id="profileForm">
+      <input type="text" id="profileUsername" placeholder="Username" required>
+      <input type="email" id="profileEmail" placeholder="Email" required>
+      <button type="submit">Update Profile</button>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2024 Task Manager. All rights reserved.</p>
+    <p>Contact: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+  </footer>
+  <script src="profile.js"></script>
+</body>
+</html>
